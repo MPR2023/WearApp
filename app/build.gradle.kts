@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.cognisteear"
-    compileSdk = 30
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.example.cognisteear"
         minSdk = 30
-        targetSdk = 30
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
         vectorDrawables {
