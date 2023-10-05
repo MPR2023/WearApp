@@ -52,20 +52,19 @@ dependencies {
     // ...
 }
 dependencies {
-    implementation("androidx.core:core-ktx:1.6.0")
-    implementation("com.google.android.gms:play-services-wearable:17.1.0")
-    implementation("androidx.percentlayout:percentlayout:1.0.0")
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.recyclerview:recyclerview:1.2.1")
-    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.wear.compose:compose-material:1.2.0")
-    implementation("androidx.wear.compose:compose-foundation:1.2.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
-    implementation("androidx.activity:activity-compose:1.3.1")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation("androidx.core:core-ktx:1.6.0")  // Downgraded from 1.12.0
+    implementation("com.google.android.gms:play-services-wearable:17.1.0")  // Downgraded from 18.1.0
+    implementation("androidx.percentlayout:percentlayout:1.0.0")  // Remains the same
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")  // Remains the same
+    implementation("androidx.recyclerview:recyclerview:1.2.1")  // Downgraded from 1.3.1
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")  // Downgraded from 2.6.2
+    implementation("androidx.activity:activity-compose:1.3.1")  // Downgraded from 1.7.2
+    
+    // Compose dependencies are tricky; you might need to stick to an older version
+    // implementation("androidx.compose.ui:ui:1.0.5")
+    // implementation("androidx.compose.ui:ui-tooling-preview:1.0.5")
+    // implementation("androidx.compose.material:material:1.0.5")
+    
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.5")  // Downgraded
+    debugImplementation("androidx.compose.ui:ui-tooling:1.0.5")  // Downgraded
 }
