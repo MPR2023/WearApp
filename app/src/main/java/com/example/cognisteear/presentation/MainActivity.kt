@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity() {
         val leScanCallback: ScanCallback = object : ScanCallback() {
             override fun onScanResult(callbackType: Int, result: ScanResult) {
                 super.onScanResult(callbackType, result)
-                if (result.device.address == "Your_Arduino_Device_Address") {
+                if (result.device.address == "f47ac10b-58cc-4372-a567-0e02b2c3d479") {
                     val rssi = result.rssi
                     val txPower = -59  // Replace with your device's calibrated TxPower
                     val distance = calculateDistance(rssi, txPower)
