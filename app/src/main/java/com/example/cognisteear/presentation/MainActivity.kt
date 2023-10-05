@@ -16,7 +16,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -30,7 +30,7 @@ import kotlin.math.pow
 
 class MainActivity : ComponentActivity() {
 
-    private val distanceState = mutableStateOf(0.0)  // Define distanceState here
+    private val distanceState = mutableDoubleStateOf(0.0) // Define distanceState here
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
                     val rssi = result.rssi
                     val txPower = -59  // Replace with your device's calibrated TxPower
                     val distance = calculateDistance(rssi, txPower)
-                    distanceState.value = distance
+                    distanceState.doubleValue = distance
                     // TODO: Update your UI here
                 }
             }
